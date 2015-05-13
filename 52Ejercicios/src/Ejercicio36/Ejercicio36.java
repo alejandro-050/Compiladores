@@ -15,7 +15,7 @@ public class Ejercicio36 {
         int array[][]= new int[5][4];
         
         for(int i=0;i<5;i++){
-           System.out.print("\t"); 
+            System.out.print("\t"); 
            for(int j=0;j<4;j++){
            array[i][j]=(int) rnd.nextDouble()*intervalo;
            System.out.print(array[i][j]+" ");
