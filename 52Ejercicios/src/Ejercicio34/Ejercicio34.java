@@ -1,5 +1,7 @@
 package Ejercicio34;
 
+import java.util.Scanner;
+
 /**
  * Hacer un programa que lea las calificaciones de un alumno en 10 asignaturas,
  * las almacene en un vector y calcule e imprima su media
@@ -9,6 +11,7 @@ package Ejercicio34;
 public class Ejercicio34 {
 
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
         String[] asignaturas = {"Matematica", "Biologia", "Quimica", "Lenguaje", "Fisica", "Ingles", "Historia", "E. Fisica", "E. musical",
             "Computacion"};
         double suma = 0;
@@ -18,6 +21,7 @@ public class Ejercicio34 {
             notas[i] = Double.parseDouble(read());
             suma += notas[i];
         }
+         System.out.println("Media es: " + suma/10);
     }
 
     private static String read() {

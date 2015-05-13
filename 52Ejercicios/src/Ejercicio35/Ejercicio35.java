@@ -11,20 +11,27 @@ public class Ejercicio35 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int i;
+        int i,a,b=0,p=0;
         double[] numeros = new double[10]; 
         double suma = 0;
         
-        System.out.println("Lectura de los elementos del array: ");
+        System.out.println("Ingresa los datos del arreglo: ");
         for (i = 0; i < 10; i++) {
-            System.out.print("numeros[" + i + "]= ");
+            System.out.print("Numero[" + i + "]= ");
             numeros[i]=sc.nextInt();
         }
- 
+        System.out.println("Que numero deseas buscar");
+        a= sc.nextInt();
+        
         for (i = 0; i < 10; i++) {
-              suma += numeros[i];
+             if(numeros[i]==a){
+                 b=1;
+                 p=i;
+             }
             }
-         System.out.println("Media es: " + suma/10);
+        if(b==1){
+          System.out.println("El dato si esta en el arreglo y se encuentra en la posicion"+p);
+        }
         
     }
 } 
