@@ -4,7 +4,7 @@ package Ejercicio25;
 import java.util.Scanner;
 
 /**
- *
+ *Introducir un numero menor de 5000 y pasarlo a numero romano
  * @author j3llyic3
  */
 public class Ejercicio25 {
