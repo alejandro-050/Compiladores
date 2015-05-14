@@ -1,6 +1,7 @@
 
 package Ejercicio41;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -11,28 +12,41 @@ su centro de pertenencia
  * @author j3llyic3
  */
 public class Ejercicio41 {
-    Scanner sc = new Scanner(System.in);
-
-    String cursos[]= new String[5];
-    int array1[][]= new int[5][4];
-    int array2[][]= new int[5][4];
-    int array3[][]= new int[5][4];
-    int array4[][]= new int[5][4];
-    int array5[][]= new int[5][4];
-    double media1=0;
-    double media2=0;
-    double media3=0;
-    double media4=0;
-    double media5=0;
-   
-    public static void main(String[] args) {
-        for(int i=0;i<5;i++){
-            System.out.println("Nombre del curso");
-            cursos[i]=sc.next();
-            for(i=0;i<5;i++){
-             System.out.println("Nota "+i+": ");
+     public static void main(String[] args) {
+        double[][][] arrmul= new double[5][10][20];
+        double notCur=0, notCent=0, media=0;
+        double mediCent=0;
+        Random rnd= new Random();
+        
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 10; j++) {
+                for (int k = 0; k < 20; k++) {
+                    arrmul[i][j][k]=(int)(rnd.nextDouble()*10+5);
+                }
+            }
+        }
+        
+        for (int i = 0; i < 5; i++) {
+            notCent=0;
+            System.out.println("\nCentro "+(i+1));
             
-           }
+            for (int j = 0; j < 10; j++) {
+                notCur=0;
+                System.out.println("Curso "+(j+1));
+                
+                for (int k = 0; k < 20; k++) {
+                    System.out.println("Materia "+(k+1));
+                    System.out.println("Valor "+arrmul[i][j][k]);
+                    notCur=notCur + arrmul[i][j][k];
+                }
+                media=notCur/20;
+                System.out.println("Media de Curso "+(j+1)+" es "+media);
+                notCent=notCent+media;
+            }
+            mediCent=notCent/10;
+            System.out.println("Media de centro "+(i+1)+" es "+mediCent);
+        }
+        
     }
     
 }
